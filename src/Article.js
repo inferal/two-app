@@ -4,13 +4,12 @@ export default class Article extends  Component{
     constructor(props){
         super(props)
         this.state = {
-            isOpen: false
+            isOpen: true
         }
     }
     render(){
         const {article} = this.props
         const {isOpen} = this.state
-        const body = isOpen ? <section>{article.text}</section> : null
         return(
             <div>
                 <h3>{article.title}</h3>
