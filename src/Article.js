@@ -3,15 +3,15 @@ import CommentList from './CommentList'
 
 export default class Article extends  Component{
     constructor(props){
-        super(props)
+        super(props);
 
         this.state = {
             isOpen: true
         }
     }
     render(){
-        const {article} = this.props
-        const {isOpen} = this.state
+        const {article} = this.props;
+        const {isOpen} = this.state;
         return(
             <div>
                 <h3>{article.title}</h3>
@@ -24,8 +24,8 @@ export default class Article extends  Component{
     }
 
     getBody(){
-        if (!this.state.isOpen) return null
-        const {article} = this.props
+        if (!this.state.isOpen) return null;
+        const {article} = this.props;
         return <section>
             {article.text}
             <CommentList comments = {article.comments}/>
